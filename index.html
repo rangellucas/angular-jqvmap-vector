@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Maps Vector</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/jqvmap.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/tether.js"></script>
+
+		<script type="text/javascript" src="js/angular-jqvmap.js"></script>
+		<script type="text/javascript" src="js/jquery.vmap.js"></script>
+		<script type="text/javascript" src="js/maps/jquery.vmap.world.js"></script>
+		<script type="text/javascript" src="js/maps/jquery.vmap.brazil.js"></script>
+		<script type="text/javascript" src="js/maps/jquery.vmap.usa.js"></script>
+		<script type="text/javascript" src="js/maps/jquery.vmap.europe.js"></script>
+
+		<script type="text/javascript" src="app.js"></script>
+
+	</head>
+	<body ng-app="app">
+		<div class="container">
+			<h1>Angular JQVMap</h1>
+			<div class="row" ng-controller="CtrlWorld">
+				<div class="jumbotron clearfix">
+					<div class="col-md-3">
+						<div class="form-group">
+			        		<p><b>Map</b>: world_en </p>
+			        		<p><b>Region</b>: {{region.name}}  </p>
+			        		<p><b>Code</b>: {{region.id}} </p>
+			        	</div>
+					</div>	
+					<div class="col-md-9">
+						<div class="card">
+							<div class="card-header">
+								World
+							</div>
+							<div class="card-body">
+								<div 
+									vmap
+									vmap-map="world_en"
+									vmap-colors="{br:'yellow'}"
+									vmap-selected-regions="['br']"
+									vmap-background="transparent"
+									vmap-color="#ccc"
+									vmap-hover-color="#cfcfcf",
+									vmap-selected-color="#6391ff"
+									vmap-scale-colors="#6391ff"
+									vmap-normalize-function="linear"
+									vmap-enable-zoom="true"
+									vmap-show-tooltip="true"
+									vmap-border-color="black"
+									vmap-border-width="1",
+									vmap-border-opacity="1.05"
+									vmap-multi-select-region="true"
+									vmap-name-region="region.name"
+									vmap-id-region="region.id"
+									class="vmap">	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>
+			<div class="row" ng-controller="CtrlBrazil">
+				<div class="jumbotron clearfix">
+					<div class="col-md-3">
+						<div class="form-group">
+			        		<p><b>Map</b>: brazil_br </p>
+			        		<p><b>Region</b>: {{region.name}}  </p>
+			        		<p><b>Code</b>: {{region.id}} </p>
+			        	</div>
+					</div>	
+					<div class="col-md-9">
+						<div class="card">
+							<div class="card-header">
+								Brazil
+							</div>
+							<div class="card-body">
+								<div 
+									vmap
+									vmap-map="brazil_br"
+									vmap-colors="{go:'yellow',df: 'blue'}"
+									vmap-selected-regions="['sp']"
+									vmap-background="transparent"
+									vmap-color="#ccc"
+									vmap-hover-color="#cfcfcf",
+									vmap-selected-color="#6391ff"
+									vmap-scale-colors="#6391ff"
+									vmap-normalize-function="linear"
+									vmap-enable-zoom="true"
+									vmap-show-tooltip="true"
+									vmap-border-color="black"
+									vmap-border-width="1",
+									vmap-border-opacity="1.05"
+									vmap-multi-select-region="true"
+									vmap-name-region="region.name"
+									vmap-id-region="region.id"
+									class="vmap">	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>
+			<div class="row" ng-controller="CtrlUsa">
+				<div class="jumbotron clearfix">
+					<div class="col-md-3">
+						<div class="form-group">
+			        		<p><b>Map</b>: usa_en </p>
+			        		<p><b>Region</b>: {{region.name}}  </p>
+			        		<p><b>Code</b>: {{region.id}} </p>
+			        	</div>
+					</div>	
+					<div class="col-md-9">
+						<div class="card">
+							<div class="card-header">
+								USA
+							</div>
+							<div class="card-body">
+								<div 
+									vmap
+									vmap-map="usa_en"
+									vmap-colors="{ca:'yellow',ny: 'blue'}"
+									vmap-selected-regions="['wa']"
+									vmap-background="transparent"
+									vmap-color="#ccc"
+									vmap-hover-color="#cfcfcf",
+									vmap-selected-color="#6391ff"
+									vmap-scale-colors="#6391ff"
+									vmap-normalize-function="linear"
+									vmap-enable-zoom="true"
+									vmap-show-tooltip="true"
+									vmap-border-color="black"
+									vmap-border-width="1",
+									vmap-border-opacity="1.05"
+									vmap-multi-select-region="true"
+									vmap-name-region="region.name"
+									vmap-id-region="region.id"
+									class="vmap">	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>	
+			<div class="row" ng-controller="CtrlEurope">
+				<div class="jumbotron clearfix">
+					<div class="col-md-3">
+						<div class="form-group">
+			        		<p><b>Map</b>: europe_en </p>
+			        		<p><b>Region</b>: {{region.name}}  </p>
+			        		<p><b>Code</b>: {{region.id}} </p>
+			        	</div>
+					</div>	
+					<div class="col-md-9">
+						<div class="card">
+							<div class="card-header">
+								Europe
+							</div>
+							<div class="card-body">
+								<div 
+									vmap
+									vmap-map="europe_en"
+									vmap-colors="{pt:'yellow',es: 'blue'}"
+									vmap-selected-regions="['gb']"
+									vmap-background="transparent"
+									vmap-color="#ccc"
+									vmap-hover-color="#cfcfcf",
+									vmap-selected-color="#6391ff"
+									vmap-scale-colors="#6391ff"
+									vmap-normalize-function="linear"
+									vmap-enable-zoom="true"
+									vmap-show-tooltip="true"
+									vmap-border-color="black"
+									vmap-border-width="1",
+									vmap-border-opacity="1.05"
+									vmap-multi-select-region="true"
+									vmap-name-region="region.name"
+									vmap-id-region="region.id"
+									class="vmap">	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>	
+		</div>		
+	</body>
+</html>
